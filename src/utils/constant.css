@@ -1,0 +1,29 @@
+.dropdown {
+  height: 30px;
+  width: 66px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.linkacc {
+  color: #1e40af;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* menu.css */
+.menuleft {
+  background-color: #d9d9d9 !important;
+  padding: 0;
+  text-align: left;
+}
+
+.constDown {
+  font-size: 15px !important;
+  margin-left: 10px !important;
+  font-weight: bold;
+}

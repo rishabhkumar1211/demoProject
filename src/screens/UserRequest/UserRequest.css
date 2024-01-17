@@ -1,0 +1,297 @@
+.ant-btn-primary {
+  min-width: 100px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.ant-popover-inner {
+  background-color: #ffe5e4 !important;
+}
+
+.popContent {
+  background-color: #ffe5e4;
+  padding: 20px;
+  font-size: 14px;
+}
+.textStyle {
+  color: #dd524c;
+  padding: 0px;
+}
+.user-content {
+  background-color: #fff;
+  padding: 30px;
+}
+.user-maincontent {
+  margin-bottom: 20;
+}
+.headinglabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.userTab {
+  flex-direction: row;
+  background-color: #fff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.custom-btn {
+  margin-right: 7px;
+}
+
+.custom-disabled-button {
+  margin: 7px;
+}
+.userResult {
+  font-size: 12px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.approveModalFooter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.rejectModalFooter {
+  display: flex;
+  justify-content: center;
+}
+
+.approve {
+  max-width: 300px;
+  width: 50%;
+}
+
+.reject {
+  max-width: 800px;
+  max-height: 600px;
+  width: 80%;
+}
+
+.approveModalFooterCancel {
+  background-color: black;
+  color: white;
+  margin-right: 8px;
+  width: 30%;
+}
+
+.approveModalFooterYes {
+  background-color: green;
+  color: white;
+  width: 30%;
+}
+.rejectModalFooterYes {
+  background-color: red;
+  color: white;
+  width: 30%;
+}
+
+.approveModalContent {
+  text-align: center;
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+.rejectModalContent {
+  text-align: center;
+}
+
+.approveHeadline1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px;
+}
+
+.rejectHeadline1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+.approveMainContentFont p {
+  font-weight: 600;
+}
+
+.approveMainContentFont span {
+  font-weight: 600;
+}
+
+.rejectModalName {
+  font-weight: 600;
+  margin-top: 5px;
+  padding: 0px;
+}
+
+.approveErrModalName {
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.approveErrModalNI {
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px;
+}
+
+.approveErrModaldate {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.rejectList {
+  border-bottom: none;
+  margin-left: 10px;
+}
+.rejectradio {
+  margin-right: 8px;
+}
+
+/* BasicInfoComponent.css */
+
+.basic-info-container {
+  margin-right: 6rem;
+  padding: 9px;
+  display: inline-block;
+}
+
+.basic-info-title {
+  font-weight: bold;
+  padding: 6px;
+}
+
+.basic-info-content {
+  padding: 9px;
+}
+
+.account-history-title {
+  font-weight: bold;
+  padding: 5px;
+  margin-bottom: 16px;
+}
+
+.list-item-container {
+  border: 1px solid #e8e8e8 !important;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.list-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list-item-text {
+  flex: 1;
+  font-weight: bold;
+}
+
+.list-item-details {
+  font-size: 12px;
+}
+
+.list-item-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.list-item-date {
+  margin-top: 5px;
+}
+
+/* DocumentComponent.css */
+
+.card {
+  height: 200px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 90%;
+  background-color: #0d38b0;
+  color: white;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.secondary-button {
+  width: 45%;
+  background-color: #4f9be8;
+  color: "white";
+}
+
+.menu-button {
+  width: 92%;
+  background-color: #888783;
+  color: white;
+}
+
+.menu-button2 {
+  width: 92%;
+  background-color: #4f9be8;
+  color: white;
+}
+
+/* menu.css */
+.menu {
+  background-color: #d9d9d9 !important;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-divider {
+  background-color: #fff !important;
+}
+
+.docDown {
+  position: absolute;
+  right: 12px;
+  bottom: 7px;
+}
+.combo {
+  width: 45%;
+  margin-right: 8px;
+  background-color: #0d38b0;
+  color: white;
+}
+
+/* Account.css */
+
+.user-content {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.back-link {
+  color: black;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.boldFont {
+  font-weight: bold;
+}
+
+.lightFont {
+  font-weight: lighter;
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+  margin-top: 1.5rem;
+}

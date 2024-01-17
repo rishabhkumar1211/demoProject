@@ -1,0 +1,55 @@
+.layoutContainer .ant-layout {
+  min-height: 100vh;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 50px;
+  align-self: center;
+}
+
+.ant-layout-sider-children {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+}
+.border-less {
+  border: "none";
+}
+
+.ant-menu-dark {
+  background: #fff;
+}
+
+.ant-menu-inline {
+  width: 90%;
+}
+
+.site-layout-background {
+  background-color: #fff;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 60px;
+}
+.custom-search-input.ant-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.ant-input-affix-wrapper {
+  border: none;
+}
+
+.custom-toggle-btn {
+  margin-right: 40px;
+  border: none;
+  color: #000;
+}
