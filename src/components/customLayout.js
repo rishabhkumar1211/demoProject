@@ -6,6 +6,7 @@ import "./customLayout.css";
 import UserProfileHeader from "./userProfileHeader";
 import NotificationIcon from "./notificationIcon";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
@@ -21,14 +22,15 @@ const CustomLayout = ({ children }) => {
       <Sider
         collapsed={collapsed}
         onCollapse={toggle}
-        // collapsedWidth={150}
         breakpoint="md"
         style={{ backgroundColor: "white" }}
       >
         <img src={logo} alt="Logo" className="logo" />
         <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           <Menu.Item key="1" icon={<UserOutlined />}>
-            User Request
+            <Link to="/user-request" className="linkacc">
+              User Request
+            </Link>
           </Menu.Item>
         </Menu>
       </Sider>

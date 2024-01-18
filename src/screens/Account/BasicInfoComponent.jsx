@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Divider, List } from "antd";
-
+import './Account.css';
 const data = [
   {
     title: "NI#",

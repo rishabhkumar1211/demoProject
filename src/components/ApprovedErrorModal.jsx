@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Modal } from "antd";
-
+import './modal.css';
 export const ApproveErrorModal = ({ visible, onCancel, data }) => {
   console.log("sad", data);
 

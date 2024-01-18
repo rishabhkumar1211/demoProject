@@ -48,5 +48,9 @@ body {
 .ant-table-thead > tr > th {
   background-color: #1890ff; /* Your desired background color */
   color: #fff; /* Your desired text color */
+  font-size: 12px;
+}
+.ant-table-wrapper .ant-table  {
+  font-size: 12px;
 }
 /* Add more custom styles to override Ant Design components */

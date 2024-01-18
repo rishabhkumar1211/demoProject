@@ -1,10 +1,21 @@
-import React from "react";
-import { Row, Col, Card, Button, Dropdown, Menu, Space } from "antd";
+import React, { useState } from "react";
+import { Row, Col, Card, Button, Dropdown, Menu, Space, Modal } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-
+import "./Account.css";
 const DocumentComponent = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
   const handleMenuClick = (e) => {
     // Handle menu click
+  };
+
+  const handleViewButtonClick = (imageSrc) => {
+    setModalImage(imageSrc);
+    setModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
   };
 
   const menu = (
@@ -24,11 +35,31 @@ const DocumentComponent = () => {
             <Col span={12}>
               <Card
                 className="card"
-                cover={<img alt="Rib Document" src="your_image_url_rib" />}
-              />
+                style={{ height: "200px", overflow: "hidden" }}
+              >
+                <img
+                  alt="Rib Document"
+                  src="https://source.unsplash.com/x8i6FfaZAbs"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+                {/* Other Card content */}
+              </Card>
               <p className="image-container">Rib Document</p>
               <p className="image-container">
-                <Button className="button">View</Button>
+                <Button
+                  className="button"
+                  onClick={() =>
+                    handleViewButtonClick(
+                      "https://source.unsplash.com/x8i6FfaZAbs"
+                    )
+                  }
+                >
+                  View
+                </Button>
               </p>
               <div className="image-container">
                 <Dropdown overlay={menu} trigger={["click"]}>
@@ -45,8 +76,19 @@ const DocumentComponent = () => {
             <Col span={12}>
               <Card
                 className="card"
-                cover={<img alt="EPassport*" src="your_image_url_passport" />}
-              />
+                style={{ height: "200px", overflow: "hidden" }}
+              >
+                <img
+                  alt="EPassport*"
+                  src="https://source.unsplash.com/0QcSnCM0aMc"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+                {/* Other Card content */}
+              </Card>
               <p className="image-container">Passport*</p>
               <div className="image-container">
                 <Button className="combo">View</Button>
@@ -72,8 +114,19 @@ const DocumentComponent = () => {
             <Col span={12}>
               <Card
                 className="card"
-                cover={<img alt="UserPassport*" src="your_image_url_rib" />}
-              />
+                style={{ height: "200px", overflow: "hidden" }}
+              >
+                <img
+                  alt="EPassport*"
+                  src="https://source.unsplash.com/0QcSnCM0aMc"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+                {/* Other Card content */}
+              </Card>
               <p className="image-container">Passport*</p>
               <div className="image-container">
                 <Button className="combo">View</Button>
@@ -94,8 +147,19 @@ const DocumentComponent = () => {
             <Col span={12}>
               <Card
                 className="card"
-                cover={<img alt="Current" src="your_image_url_passport" />}
-              />
+                style={{ height: "200px", overflow: "hidden" }}
+              >
+                <img
+                  alt="Current"
+                  src="https://source.unsplash.com/rDEOVtE7vOs"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+                {/* Other Card content */}
+              </Card>
               <p className="image-container">Current photo (e.g. selfie)</p>
               <div className="image-container">
                 <Button className="combo">View</Button>
@@ -115,6 +179,26 @@ const DocumentComponent = () => {
           </Row>
         </Col>
       </Row>
+
+      {/* Modal */}
+      <Modal
+        visible={modalVisible}
+        onCancel={handleCloseModal}
+        footer={null}
+        width={600}
+      >
+        {modalImage && (
+          <img
+            alt="Modal View"
+            src={modalImage}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
+          />
+        )}
+      </Modal>
     </div>
   );
 };

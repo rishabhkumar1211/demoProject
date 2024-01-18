@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Menu } from "antd";
-import CustomPopover from "../screens/UserRequest/customPopover";
-import { RejectModal } from "../screens/UserRequest/RejectModal";
-import { ApproveModal } from "../screens/UserRequest/ApproveModal";
-import { ApproveErrorModal } from "../screens/UserRequest/ApprovedErrorModal";
-import arrow from "../../src/assets/images/arrow-removebg-preview.png";
+import CustomPopover from "./customPopover";
+import { RejectModal } from "./RejectModal";
+import { ApproveModal } from "./ApproveModal";
+import { ApproveErrorModal } from "./ApprovedErrorModal";
+import arrow from "../assets/images/arrow-removebg-preview.png";
 import { Link } from "react-router-dom";
-import "./constant.css";
+import "./column.css";
 const ActionColumn = ({ actionData }) => {
   const [selectedAction, setSelectedAction] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);

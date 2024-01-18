@@ -2,6 +2,10 @@
   min-height: 100vh;
 }
 
+.ant-input-affix-wrapper {
+  padding: 0 !important;
+}
+
 .logo {
   width: 100px;
   height: 100px;
@@ -22,6 +26,15 @@
 
 .ant-menu-dark {
   background: #fff;
+}
+
+.ant-menu-inline-collapsed {
+  width: -webkit-fill-available !important;
+  margin-right: 10px;
+}
+
+.linkacc {
+  text-decoration: none !important;
 }
 
 .ant-menu-inline {

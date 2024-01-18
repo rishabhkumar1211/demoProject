@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Layout from "../../components/customLayout";
 import BasicInfoComponent from "./BasicInfoComponent";
 import DocumentsComponent from "./DocumentComponent";
-
+import "./Account.css";
+import HistoryTable from "./HistoryTable";
 const Account = () => {
   const [showDocuments, setShowDocuments] = useState(false);
 
@@ -57,7 +58,8 @@ const Account = () => {
           </Button>
         </div>
 
-        {showDocuments ? <DocumentsComponent /> : <BasicInfoComponent />}
+        {/* {showDocuments ? <DocumentsComponent /> : <BasicInfoComponent />} */}
+        {showDocuments ? <DocumentsComponent /> : <HistoryTable />}
       </div>
     </Layout>
   );

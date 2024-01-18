@@ -1,0 +1,109 @@
+.approveModalFooter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .rejectModalFooter {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .approve {
+    max-width: 300px;
+    width: 50%;
+  }
+  
+  .reject {
+    max-width: 800px;
+    max-height: 600px;
+    width: 80%;
+  }
+  
+  .approveModalFooterCancel {
+    background-color: black;
+    color: white;
+    margin-right: 8px;
+    width: 30%;
+  }
+  
+  .approveModalFooterYes {
+    background-color: green;
+    color: white;
+    width: 30%;
+  }
+  .rejectModalFooterYes {
+    background-color: red;
+    color: white;
+    width: 30%;
+  }
+  
+  .approveModalContent {
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 20px;
+  }
+  .rejectModalContent {
+    text-align: center;
+  }
+  
+  .approveHeadline1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .rejectHeadline1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .approveMainContentFont p {
+    font-weight: 600;
+  }
+  
+  .approveMainContentFont span {
+    font-weight: 600;
+  }
+  
+  .rejectModalName {
+    font-weight: 600;
+    margin-top: 5px;
+    padding: 0px;
+  }
+  
+  .approveErrModalName {
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  
+  .approveErrModalNI {
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .approveErrModaldate {
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  .rejectList {
+    border-bottom: none;
+    margin-left: 10px;
+  }
+  .rejectradio {
+    margin-right: 8px;
+  }
+  
+  .popContent {
+    background-color: #ffe5e4;
+    padding: 20px;
+    font-size: 14px;
+  }
+  .textStyle {
+    color: #dd524c;
+    padding: 0px;
+  }

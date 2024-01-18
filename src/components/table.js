@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Table, Dropdown, Menu, Pagination } from "antd";
 import { CaretDownOutlined } from "@ant-design/icons";
-import columns from "../utils/constant";
+import columns from "./column";
 import "./table.css";
 
 const data = [
