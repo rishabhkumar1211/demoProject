@@ -1,3 +1,13 @@
+.breadcrumb {
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.statusTag {
+  border: 0;
+  background: none !important;
+}
 /* BasicInfoComponent.css */
 
 .basic-info-container {
@@ -12,7 +22,7 @@
 }
 
 .basic-info-content {
-  padding: 9px;
+  padding: 6px;
 }
 
 .account-history-title {
@@ -40,7 +50,7 @@
 }
 
 .list-item-details {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .list-item-author {
@@ -56,6 +66,7 @@
 
 .card {
   height: 200px;
+  overflow: hidden;
 }
 
 .title {
@@ -145,7 +156,6 @@
 }
 
 .hiscombo {
-  width: 60%;
   background-color: #0d38b0;
   color: white;
 }
@@ -163,10 +173,35 @@
   min-height: 100vh;
 }
 
+.user-accountcontent {
+  background-color: #fff;
+  padding: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.static {
+  /* Styles for the fixed (static) header */
+  position: sticky;
+  top: 0;
+  background-color: #fff; /* Set your desired background color */
+  padding: 20px;
+  z-index: 100; /* Set a higher z-index to keep it above the scrollable content */
+}
+
+.scroll {
+  /* Styles for the scrollable content */
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px;
+}
+
 .back-link {
   color: black;
   cursor: pointer;
   font-size: 12px;
+  font-weight: 500;
 }
 
 .boldFont {
@@ -179,6 +214,34 @@
 .button-container {
   display: flex;
   gap: 10px;
-  margin-bottom: 5px;
   margin-top: 1.5rem;
+}
+
+/* ViewModal.css */
+
+.modalContainer {
+  text-align: center;
+}
+
+.cardContainer {
+  height: 400px;
+  overflow: hidden;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.date-label {
+  font-size: 12px;
+  color: #888; /* Lighter gray color */
+  margin-bottom: 8px; /* Adjust as needed */
+}
+
+.date-label1 {
+  font-size: 12px;
+  color: #888; /* Lighter gray color */
+  margin: 1px 16px;
 }

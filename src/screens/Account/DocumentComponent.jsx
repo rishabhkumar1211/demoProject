@@ -1,12 +1,21 @@
 import React, { useState } from "react";
-import { Row, Col, Card, Button, Dropdown, Menu, Space, Modal } from "antd";
+import { Row, Col, Card, Button, Dropdown, Menu, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import "./Account.css";
-const DocumentComponent = () => {
+import { RejectModal } from "../../components/RejectModal";
+import ViewModal from "./ViewModal";
+import { Link } from "react-router-dom";
+import { DocumentApproval } from "./DocumentApproval";
+
+const DocumentComponent = (data) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalImage, setModalImage] = useState(null);
+  const [secondModalVisible, setSecondModalVisible] = useState(false);
+  const [selectedAction, setSelectedAction] = useState(null);
+
   const handleMenuClick = (e) => {
-    // Handle menu click
+    setSelectedAction(e.key);
+    setSecondModalVisible(true);
   };
 
   const handleViewButtonClick = (imageSrc) => {
@@ -16,6 +25,10 @@ const DocumentComponent = () => {
 
   const handleCloseModal = () => {
     setModalVisible(false);
+  };
+
+  const handleCloseSecondModal = () => {
+    setSecondModalVisible(false);
   };
 
   const menu = (
@@ -33,18 +46,12 @@ const DocumentComponent = () => {
           <p className="title">Employer document</p>
           <Row gutter={16}>
             <Col span={12}>
-              <Card
-                className="card"
-                style={{ height: "200px", overflow: "hidden" }}
-              >
+              <p className="date-label">Uploaded on 02 Sep 23, 14:30 PM</p>
+              <Card className="card">
                 <img
                   alt="Rib Document"
                   src="https://source.unsplash.com/x8i6FfaZAbs"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain",
-                  }}
+                  className="modalImage"
                 />
                 {/* Other Card content */}
               </Card>
@@ -71,28 +78,38 @@ const DocumentComponent = () => {
                   </Button>
                 </Dropdown>
               </div>
+              <p className="date-label1">Provided by User</p>
+              <p className="date-label1">NI#245678</p>
             </Col>
 
             <Col span={12}>
-              <Card
-                className="card"
-                style={{ height: "200px", overflow: "hidden" }}
-              >
+              <p className="date-label">Uploaded on 02 Sep 23, 14:30 PM</p>
+              <Card className="card">
                 <img
                   alt="EPassport*"
                   src="https://source.unsplash.com/0QcSnCM0aMc"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain",
-                  }}
+                  className="modalImage"
                 />
                 {/* Other Card content */}
               </Card>
               <p className="image-container">Passport*</p>
               <div className="image-container">
-                <Button className="combo">View</Button>
-                <Button className="button secondary-button">History</Button>
+                <Button
+                  className="combo"
+                  onClick={() =>
+                    handleViewButtonClick(
+                      "https://source.unsplash.com/0QcSnCM0aMc"
+                    )
+                  }
+                >
+                  View
+                </Button>
+                <Link
+                  to="/user-request/Account/documents/history"
+                  state={{ data }}
+                >
+                  <Button className="button secondary-button">History</Button>
+                </Link>
               </div>
               <p className="image-container">
                 <Dropdown overlay={menu} trigger={["click"]}>
@@ -104,6 +121,8 @@ const DocumentComponent = () => {
                   </Button>
                 </Dropdown>
               </p>
+              <p className="date-label1">Provided by User</p>
+              <p className="date-label1">NI#245678</p>
             </Col>
           </Row>
         </Col>
@@ -112,25 +131,33 @@ const DocumentComponent = () => {
           <p className="title">User document</p>
           <Row gutter={16}>
             <Col span={12}>
-              <Card
-                className="card"
-                style={{ height: "200px", overflow: "hidden" }}
-              >
+              <p className="date-label">Uploaded on 02 Sep 23, 14:30 PM</p>
+              <Card className="card">
                 <img
                   alt="EPassport*"
                   src="https://source.unsplash.com/0QcSnCM0aMc"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain",
-                  }}
+                  className="modalImage"
                 />
                 {/* Other Card content */}
               </Card>
               <p className="image-container">Passport*</p>
               <div className="image-container">
-                <Button className="combo">View</Button>
-                <Button className="button secondary-button">History</Button>
+                <Button
+                  className="combo"
+                  onClick={() =>
+                    handleViewButtonClick(
+                      "https://source.unsplash.com/0QcSnCM0aMc"
+                    )
+                  }
+                >
+                  View
+                </Button>
+                <Link
+                  to="/user-request/Account/documents/history"
+                  state={{ data }}
+                >
+                  <Button className="button secondary-button">History</Button>
+                </Link>
               </div>
               <p className="image-container">
                 <Dropdown overlay={menu} trigger={["click"]}>
@@ -142,28 +169,38 @@ const DocumentComponent = () => {
                   </Button>
                 </Dropdown>
               </p>
+              <p className="date-label1">Provided by User</p>
+              <p className="date-label1">NI#245678</p>
             </Col>
 
             <Col span={12}>
-              <Card
-                className="card"
-                style={{ height: "200px", overflow: "hidden" }}
-              >
+              <p className="date-label">Uploaded on 02 Sep 23, 14:30 PM</p>
+              <Card className="card">
                 <img
                   alt="Current"
                   src="https://source.unsplash.com/rDEOVtE7vOs"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain",
-                  }}
+                  className="modalImage"
                 />
                 {/* Other Card content */}
               </Card>
               <p className="image-container">Current photo (e.g. selfie)</p>
               <div className="image-container">
-                <Button className="combo">View</Button>
-                <Button className="button secondary-button">History</Button>
+                <Button
+                  className="combo"
+                  onClick={() =>
+                    handleViewButtonClick(
+                      "https://source.unsplash.com/rDEOVtE7vOs"
+                    )
+                  }
+                >
+                  View
+                </Button>
+                <Link
+                  to="/user-request/Account/documents/history"
+                  state={{ data }}
+                >
+                  <Button className="button secondary-button">History</Button>
+                </Link>
               </div>
               <p className="image-container">
                 <Dropdown overlay={menu} trigger={["click"]}>
@@ -175,30 +212,34 @@ const DocumentComponent = () => {
                   </Button>
                 </Dropdown>
               </p>
+              <p className="date-label1">Provided by User</p>
+              <p className="date-label1">NI#245678</p>
             </Col>
           </Row>
         </Col>
       </Row>
 
       {/* Modal */}
-      <Modal
+      <ViewModal
         visible={modalVisible}
         onCancel={handleCloseModal}
-        footer={null}
-        width={600}
-      >
-        {modalImage && (
-          <img
-            alt="Modal View"
-            src={modalImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-            }}
-          />
-        )}
-      </Modal>
+        imageSrc={modalImage}
+      />
+      {/* Second Modal */}
+      {selectedAction === "Reject" && (
+        <RejectModal
+          visible={secondModalVisible}
+          onCancel={handleCloseSecondModal}
+          documentReject={true}
+          data={data}
+        />
+      )}
+      {selectedAction === "Approve" && (
+        <DocumentApproval
+          visible={secondModalVisible}
+          onCancel={handleCloseSecondModal}
+        />
+      )}
     </div>
   );
 };

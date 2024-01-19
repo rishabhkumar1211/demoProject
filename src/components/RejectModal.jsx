@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Button, Modal, Radio, List, Input } from "antd"; // Added Input
 
-export const RejectModal = ({ visible, onCancel, data }) => {
+export const RejectModal = ({ visible, onCancel, documentReject, data }) => {
   const [selectedReason, setSelectedReason] = useState(""); // Changed to hold a single value
   const [customReason, setCustomReason] = useState("");
-  console.log("first", selectedReason);
+
   const reasonsData = [
     "Document expired",
     "Documents illegal/damaged/obscured",
@@ -54,13 +54,17 @@ export const RejectModal = ({ visible, onCancel, data }) => {
       ]}
     >
       <div className="rejectModalContent">
-        <p className="rejectHeadline1">Do you want to Reject this user?</p>
+        {documentReject ? (
+          <p className="rejectHeadline1">Select a reason to reject</p>
+        ) : (
+          <p className="rejectHeadline1">Do you want to Reject this user?</p>
+        )}
 
         <p className="rejectModalName">
           Name:{" "}
           <span className="approveMainContentFont">
-            {data.firstname}&nbsp;{data.lastname} | NI#:{" "}
-            <span className="approveMainContentFont">{data.ni}</span>
+            John Doe | NI#:{" "}
+            <span className="approveMainContentFont">123456789</span>
           </span>
         </p>
 
@@ -73,7 +77,6 @@ export const RejectModal = ({ visible, onCancel, data }) => {
                 value={reason}
                 onChange={handleRadioChange}
                 checked={selectedReason === reason}
-                style={{ marginRight: "8px" }}
                 className="rejectradio"
               >
                 {reason}
@@ -86,21 +89,11 @@ export const RejectModal = ({ visible, onCancel, data }) => {
           <Input
             value={customReason}
             onChange={handleCustomReasonChange}
-            style={{ marginLeft: "10px" }}
+            className="custReason"
           />
         </div>
 
-        <p
-          style={{
-            marginTop: "0px",
-            marginBottom: "0",
-            textAlign: "right",
-            marginRight: "20px",
-            color: "gray",
-          }}
-        >
-          Minimum 100 words
-        </p>
+        <p className="minWord">Minimum 100 words</p>
       </div>
     </Modal>
   );

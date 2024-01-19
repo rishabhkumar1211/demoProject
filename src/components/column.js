@@ -71,7 +71,7 @@ const ActionColumn = ({ actionData }) => {
 };
 
 const EmailColumn = ({ emailText, emailData }) => {
-  console.log("doc", emailData);
+  // console.log("doc", emailData);
 
   return (
     <>
@@ -96,7 +96,11 @@ const columns = [
     dataIndex: "ni",
     key: "ni",
     render: (text, data) => (
-      <Link to={{ pathname: "/user-request/Account" }} className="linkacc">
+      <Link
+        to={{ pathname: "/user-request/Account" }}
+        state={{ data }}
+        className="linkacc"
+      >
         {text}
       </Link>
     ),

@@ -1,6 +1,6 @@
 import React from "react";
-import { Col, Divider, List } from "antd";
-import './Account.css';
+import { Col, Divider, List, Avatar } from "antd";
+import "./Account.css";
 const data = [
   {
     title: "NI#",
@@ -45,10 +45,25 @@ const data = [
 ];
 
 const BasicInfoComponent = () => {
+  const renderListItem = (item, author, date, avatarSrc) => (
+    <List.Item className="list-item-container">
+      <div className="list-item-content">
+        <div className="list-item-text">{item}</div>
+        <div className="list-item-details">
+          <div className="list-item-author">
+            by <span>{author}</span>
+          </div>
+          <div className="list-item-date">{date}</div>
+        </div>
+      </div>
+      <Avatar src={avatarSrc} />
+    </List.Item>
+  );
+
   return (
     <>
       {data.map((item, index) => (
-        <>
+        <React.Fragment key={`fragment-${index}`}>
           {index % 6 === 0 && index !== 0 && (
             <Divider key={`divider-${index}`} />
           )}
@@ -56,46 +71,43 @@ const BasicInfoComponent = () => {
             <div className="basic-info-title">{item.title}</div>
             <div className="basic-info-content">{item.content}</div>
           </Col>
-        </>
+        </React.Fragment>
       ))}
       <Divider />
       <div className="account-history-title">Account History</div>
 
+      {/* First List - The user has been Rejected */}
       <List
         size="large"
-        dataSource={["The user has been Rejected"]}
-        renderItem={(item) => (
-          <List.Item className="list-item-container">
-            <div className="list-item-content">
-              <div className="list-item-text">{item}</div>
-              <div className="list-item-details">
-                <div className="list-item-author">
-                  by <span>Rogers Martin</span>
-                </div>
-                <div className="list-item-date">Oct 5 | 09:22PM</div>
-              </div>
-            </div>
-          </List.Item>
-        )}
+        dataSource={[
+          {
+            item: "The user has been Rejected",
+            author: "Rogers Martin",
+            date: "Oct 5 | 09:22PM",
+            avatarSrc: "https://source.unsplash.com/mEZ3PoFGs_k",
+          },
+          // Add more items as needed
+        ]}
+        renderItem={(item) =>
+          renderListItem(item.item, item.author, item.date, item.avatarSrc)
+        }
       />
 
       {/* Second List - User Registered */}
       <List
         size="large"
-        dataSource={["User Registered"]}
-        renderItem={(item) => (
-          <List.Item className="list-item-container">
-            <div className="list-item-content">
-              <div className="list-item-text">{item}</div>
-              <div className="list-item-details">
-                <div className="list-item-author">
-                  by <span>George Martin</span>
-                </div>
-                <div className="list-item-date">Oct 5 | 09:22PM</div>
-              </div>
-            </div>
-          </List.Item>
-        )}
+        dataSource={[
+          {
+            item: "User Registered",
+            author: "George Martin",
+            date: "Oct 5 | 09:22PM",
+            avatarSrc: "https://source.unsplash.com/WMD64tMfc4k",
+          },
+          // Add more items as needed
+        ]}
+        renderItem={(item) =>
+          renderListItem(item.item, item.author, item.date, item.avatarSrc)
+        }
       />
     </>
   );

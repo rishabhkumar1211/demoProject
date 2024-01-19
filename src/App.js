@@ -7,6 +7,7 @@ import NotFound from "./components/NotFound";
 import UserRequest from "./screens/UserRequest/UserRequest";
 import Account from "../src/screens/Account/Account";
 import Notification from "./components/Notification";
+import History from "./screens/Account/HistoryTable";
 
 const App = () => {
   return (
@@ -16,6 +17,10 @@ const App = () => {
         <Route path="/" element={<SignIn />} />
         <Route path="/user-request" element={<UserRequest />} />
         <Route path="/user-request/Account" element={<Account />} />
+        <Route
+          path="/user-request/Account/documents/history"
+          element={<History />}
+        />
         <Route path="/notification" element={<Notification />} />
         {/* The NotFound component handles routes that don't match */}
         <Route path="/" element={<NotFound />} />
