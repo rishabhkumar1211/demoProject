@@ -1,89 +1,94 @@
 .container {
-  align-items: center;
-  justify-content: center;
-  background-color: #f5f5f5;
-  display: flex;
-  height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    display: flex;
+    height: 100vh;
 }
 
 .signin-container {
-  width: 572px;
-  height: 689px;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-}
+    width: 572px;
+    height: 689px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  
+  .logo {
+    width: 177px;
+    height: 177px;
+    margin-bottom: 50px;
+  }
 
-.logo {
-  width: 177px;
-  height: 177px;
-  margin-bottom: 50px;
-}
+  .heading-label {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
 
-.heading-label {
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-}
+  .desc-label {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  
+  .centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
 
-.desc-label {
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 0em;
-  text-align: center;
-}
+  .custom-password-input .ant-input-affix-wrapper{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 11px;
+    padding-right: 11px;
+    text-align: center;
+    width: 448px;
+  }
+  
+  .signin-button {
+    width: 443px;
+    height: 58px;
+  }
 
-.centered-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 30px;
-}
+  .custom-btn-label {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
 
-.custom-password-input .ant-input {
-  height: 50px;
-  width: 422px;
-  padding: 3px 8px !important;
-}
+  .custom-checkbox-label {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: -20px;
+  }
 
-.signin-button {
-  width: 443px;
-  height: 40px;
-}
+ .row-flexed {
+    display: flex;
+    flex-direction: row;
+    width: 443px;
+    align-items: center;
+    justify-content: space-between; /* Or use 'space-around' for equal space around items */
+  }
 
-.custom-btn-label {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 27px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-
-.custom-checkbox-label {
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-top: -20px;
-}
-
-.row-flexed {
-  display: flex;
-  flex-direction: row;
-  width: 443px;
-  align-items: center;
-  justify-content: space-between; /* Or use 'space-around' for equal space around items */
-}
-
-.pasword-label {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: right;
-  margin-top: -10px;
-}
+  .pasword-label {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: right;
+    margin-top: -10px;
+  }
+  
+  

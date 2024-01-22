@@ -1,9 +1,8 @@
 import React from "react";
 import { Button, Modal } from "antd";
+import "../css/modal.css";
 
-export const DocumentApproval = ({ visible, onCancel, data }) => {
-  console.log("sad", data);
-
+export const ApproveModal = ({ visible, onCancel, data }) => {
   return (
     <Modal
       centered
@@ -32,10 +31,19 @@ export const DocumentApproval = ({ visible, onCancel, data }) => {
       ]}
     >
       <div className="approveModalContent">
-        <p className="approveHeadline1">Do you want to approve</p>
-        <p className="approveHeadline1">the document,once</p>
-        <p className="approveHeadline1">approved,document</p>
-        <p className="approveHeadline1">cannot be changed.</p>
+        <p className="approveHeadline1">Do you want to</p>
+        <p className="approveHeadline1">Approve this user?</p>
+        <div className="approveMainContentFont">
+          <p>
+            Name:{" "}
+            <span>
+              {data.firstname}&nbsp;{data.lastname}
+            </span>
+          </p>
+          <p>
+            NI#: <span>{data.ni}</span>
+          </p>
+        </div>
       </div>
     </Modal>
   );

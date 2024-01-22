@@ -103,6 +103,18 @@ const BasicInfoComponent = () => {
             date: "Oct 5 | 09:22PM",
             avatarSrc: "https://source.unsplash.com/WMD64tMfc4k",
           },
+          {
+            item: "User Registered",
+            author: "George Martin",
+            date: "Oct 5 | 09:22PM",
+            avatarSrc: "https://source.unsplash.com/WMD64tMfc4k",
+          },
+          {
+            item: "User Registered",
+            author: "George Martin",
+            date: "Oct 5 | 09:22PM",
+            avatarSrc: "https://source.unsplash.com/WMD64tMfc4k",
+          },
           // Add more items as needed
         ]}
         renderItem={(item) =>

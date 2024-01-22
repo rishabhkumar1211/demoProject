@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Menu } from "antd";
-import CustomPopover from "./customPopover";
+import CustomPopover from "./CustomPopover";
 import { RejectModal } from "./RejectModal";
 import { ApproveModal } from "./ApproveModal";
 import { ApproveErrorModal } from "./ApprovedErrorModal";
-import arrow from "../assets/images/arrow-removebg-preview.png";
+import arrow from "../../assets/images/reload.svg";
 import { Link } from "react-router-dom";
-import "./column.css";
+import "../css/column.css";
 const ActionColumn = ({ actionData }) => {
   const [selectedAction, setSelectedAction] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
@@ -134,7 +134,9 @@ const columns = [
       const showInfo = data.status === "Rejected";
       return (
         <div>
-          <span style={{ color: fontColor }}>{text}</span>
+          <span className="info" style={{ color: fontColor }}>
+            {text}
+          </span>
           {showInfo && <CustomPopover />}
         </div>
       );

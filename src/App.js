@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Your components for different routes
 import SignIn from "./screens/AuthScreen/SignIn";
-import NotFound from "./components/NotFound";
+import NotFound from "./components/element/NotFound";
 import UserRequest from "./screens/UserRequest/UserRequest";
-import Account from "../src/screens/Account/Account";
-import Notification from "./components/Notification";
+import Account from "./screens/Account/Account";
+import Notification from "./screens/Notification/Notification";
 import History from "./screens/Account/HistoryTable";
 
 const App = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Col, Row } from "antd";
 import { Link, useLocation } from "react-router-dom";
-import Layout from "../../components/customLayout";
+import Layout from "../../components/element/CustomLayout";
 import BasicInfoComponent from "./BasicInfoComponent";
 import DocumentsComponent from "./DocumentComponent";
 import "./Account.css";
@@ -29,14 +29,14 @@ const Account = () => {
             <Col span={6}>
               <div className="boldFont">
                 Account Status:
-                <span className="lightFont">Rejected</span>
+                <span className="lightFont"> Rejected</span>
               </div>
             </Col>
             <Col span={7}>
               <div className="boldFont">
-                Reason:
+                Reason: 
                 <span className="lightFont">
-                  User does not match the criteria
+                  {" "} User does not match the criteria
                 </span>
               </div>
             </Col>

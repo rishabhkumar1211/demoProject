@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, Radio, List, Input } from "antd"; // Added Input
-
+import "../css/modal.css";
 export const RejectModal = ({ visible, onCancel, documentReject, data }) => {
   const [selectedReason, setSelectedReason] = useState(""); // Changed to hold a single value
   const [customReason, setCustomReason] = useState("");

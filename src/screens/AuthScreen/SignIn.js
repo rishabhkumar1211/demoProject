@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 import "./SignIn.css";
 const SignIn = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const SignIn = () => {
   };
 
   const handleSignInClick = () => {
-    navigate("/dashboard");
+    navigate("/user-request");
   };
 
   return (
@@ -38,11 +38,8 @@ const SignIn = () => {
             <Input placeholder="Username" />
           </Form.Item>
 
-          <Form.Item name="password">
-            <Input.Password
-              placeholder="Password"
-              className="custom-password-input"
-            />
+          <Form.Item name="password" className="custom-password-input">
+            <Input.Password placeholder="Password" />
           </Form.Item>
 
           <Form.Item>
@@ -61,13 +58,6 @@ const SignIn = () => {
                 Keep me signed in
               </Checkbox>
             </Form.Item>
-            <a
-              href="fotgotpassword"
-              onClick={handleForgotPassword}
-              className="pasword-label"
-            >
-              Forgot Password?
-            </a>
           </div>
         </Form>
       </div>

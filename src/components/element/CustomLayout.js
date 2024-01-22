@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import { Layout, Menu, Button, Input, Avatar, Badge } from "antd";
-import {
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  MenuOutlined,
-  BellOutlined,
-  SearchOutlined,
-} from "@ant-design/icons";
-import logo from "../assets/images/logo.png";
-import "./menu.css";
-import UserProfileHeader from "./userProfileHeader";
-import NotificationIcon from "./notificationIcon";
+import { Layout, Menu } from "antd";
+import { UserOutlined, MenuOutlined } from "@ant-design/icons";
+import logo from "../../assets/images/logo.svg";
+import "../css/customLayout.css";
+import UserProfileHeader from "./UserProfileHeader";
+import NotificationIcon from "./NotificationIcon";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
-const CustomLayout = () => {
+const CustomLayout = ({ children, onSearchStart }) => {
   const [collapsed, setCollapsed] = useState(false);
 
   const toggle = () => {
@@ -28,13 +22,16 @@ const CustomLayout = () => {
       <Sider
         collapsed={collapsed}
         onCollapse={toggle}
-        collapsedWidth={150}
-        style={{ backgroundColor: "white" }}
+        breakpoint="md"
+        collapsedWidth={120}
+        style={{ backgroundColor: "#F8FAFC", marginTop: "-10" }}
       >
         <img src={logo} alt="Logo" className="logo" />
         <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           <Menu.Item key="1" icon={<UserOutlined />}>
-            User Request
+            <Link to="/user-request" className="linkacc">
+              User Request
+            </Link>
           </Menu.Item>
         </Menu>
       </Sider>
@@ -44,15 +41,12 @@ const CustomLayout = () => {
             <span onClick={toggle} className="custom-toggle-btn">
               <MenuOutlined />
             </span>
-            <SearchBar />
+            <SearchBar onSearchStart={onSearchStart} />
             <UserProfileHeader />
             <NotificationIcon count={5} />
           </div>
         </Header>
-        <Content style={{ margin: "16px" }}>
-          {/* Your main content goes here */}
-          Main Content
-        </Content>
+        <Content style={{ margin: "16px" }}>{children}</Content>
       </Layout>
     </Layout>
   );

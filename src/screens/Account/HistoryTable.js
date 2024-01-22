@@ -1,12 +1,11 @@
 import React from "react";
 import { Table, Breadcrumb } from "antd";
-import HistoryColumns from "./HistoryColumn";
+import HistoryColumns from "../../components/element/HistoryColumn";
 import { Link, useLocation } from "react-router-dom";
-import Layout from "../../components/customLayout";
+import Layout from "../../components/element/CustomLayout";
 
 const History = () => {
   const location = useLocation();
-  console.log("doc", location);
 
   const dataObj = location?.state?.data;
   // Sample data for the table

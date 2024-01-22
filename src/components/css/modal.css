@@ -20,31 +20,35 @@
 }
 
 .approveModalFooterCancel {
-  background-color: black;
+  background-color: #777777;
   color: white;
   margin-right: 8px;
   width: 30%;
 }
 
 .approveModalFooterCancel:hover {
-  background-color: black;
+  background-color: #777777;
   color: white !important;
 }
 
 .approveModalFooterYes {
-  background-color: green;
+  background-color: #6ace9c;
   color: white;
   width: 30%;
 }
 
 .approveModalFooterYes:hover {
-  background-color: green;
+  background-color: #6ace9c;
   color: white !important;
 }
 .rejectModalFooterYes {
-  background-color: red;
+  background-color: #c83024;
   color: white;
   width: 30%;
+}
+.rejectModalFooterYes:hover {
+  background-color: #c83024;
+  color: white !important;
 }
 
 .approveModalContent {
@@ -128,4 +132,45 @@
   text-align: right;
   margin-right: 20px;
   color: gray;
+}
+
+.custom-search-input.ant-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.search-input {
+  border: none;
+}
+
+/* view modal.css */
+
+.modalContainer {
+  text-align: center;
+}
+
+.cardContainer {
+  height: 400px;
+  overflow: hidden;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.date-label {
+  font-size: 12px;
+  color: #888; /* Lighter gray color */
+  margin-bottom: 8px; /* Adjust as needed */
+}
+
+.date-label1 {
+  font-size: 12px;
+  color: #888; /* Lighter gray color */
+  margin: 1px 16px;
 }

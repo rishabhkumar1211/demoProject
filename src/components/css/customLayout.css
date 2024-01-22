@@ -2,14 +2,16 @@
   min-height: 100vh;
 }
 
-.ant-input-affix-wrapper {
+.custom-input.ant-input-affix-wrapper {
   padding: 0 !important;
+  border: none;
 }
 
 .logo {
   width: 100px;
   height: 100px;
   margin-bottom: 50px;
+  margin-top: 30px;
   align-self: center;
 }
 
@@ -57,9 +59,9 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.ant-input-affix-wrapper {
+/* .ant-input-affix-wrapper {
   border: none;
-}
+} */
 
 .custom-toggle-btn {
   margin-right: 40px;
